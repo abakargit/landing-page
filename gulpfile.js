@@ -27,6 +27,10 @@ gulp.task('serve', (done) => {
     gulp.series('clean', gulp.parallel('html', 'sass', 'js', 'static', 'svgSprite'), 'browsersync', 'watch')(done)
 });
 
+gulp.task('build', (done) => {
+    gulp.series('clean', gulp.parallel('html', 'sass', 'js', 'static', 'svgSprite'))(done)
+});
+
 /* Html task */
 gulp.task('html', () => {
     return gulp.src(['./src/partials/*.html', '!./src/partials/_includes/**/*'])
@@ -109,3 +113,4 @@ gulp.task('watch', () => {
 gulp.task('clean', () => {
     return del(['./build/**/*'], { dot: true });
 });
+
