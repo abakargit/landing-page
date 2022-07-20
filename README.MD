@@ -1,4 +1,4 @@
-## Hubcrag Background Lines Effect
+## Landing page
 
 ### Frontend dependencies
 
