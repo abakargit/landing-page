@@ -28,7 +28,7 @@ gulp.task('serve', (done) => {
 });
 
 gulp.task('build', (done) => {
-    gulp.series('clean', gulp.parallel('html', 'sass', 'js', 'static', 'svgSprite'))(done)
+    gulp.series('clean', gulp.parallel('html', 'sass', 'js', 'static', 'svgSprite'), 'browsersync', 'watch')(done)
 });
 
 /* Html task */
