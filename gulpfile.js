@@ -17,6 +17,12 @@ const svgSprite = require('gulp-svg-sprite');
 const autoprefixer = require('gulp-autoprefixer');
 const del = require('del');
 const webpack = require('webpack-stream');
+const ghPages = require('gulp-gh-pages');
+
+gulp.task('deploy', function() {
+  return gulp.src('./build/**/*')
+    .pipe(ghPages());
+});
 
 /* Primary tasks */
 gulp.task('default', (done) => {
@@ -112,6 +118,7 @@ gulp.task('watch', () => {
     gulp.watch("./src/js/**/*.*", gulp.series('js'));
     gulp.watch("./config.json", gulp.parallel('html', 'js'));
 });
+
 
 /* FS tasks */
 gulp.task('clean', () => {
