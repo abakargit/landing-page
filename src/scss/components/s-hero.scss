@@ -1,0 +1,50 @@
+.hero {
+  background-image: url(../img/hero-bg.jpg);
+  background-position: right;
+  @include a {
+    background-position: center;
+    background-size: cover;
+  }
+  &__wrapper {
+    max-width: 780px;
+    .title {
+      font-weight: 700;
+      font-size: 48px;
+      color: #000;
+      text-transform: uppercase;
+      margin-bottom: 80px;
+      @include a {
+        font-size: 28px;
+      }
+      span {
+        color: $color-primary;
+      }
+    }
+    .info {
+        margin-bottom: 80px;
+      p {
+        font-weight: 700;
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+      &__list {
+          padding-left: 25px;
+          font-size: 20px;
+          list-style: none;
+      }
+      &__item {
+          margin-bottom: 5px;
+          position: relative;
+          &:before {
+              content: '';
+              position: absolute;
+              width: 5px;
+              height: 2px;
+              background-color: #000;
+              left: -16px;
+              top: 11px;
+          }
+      }
+    }
+  }
+}

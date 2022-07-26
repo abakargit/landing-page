@@ -1,0 +1,48 @@
+.footer {
+  background-color: #3d4050;
+  padding: 30px 0;
+  color: #fff;
+  font-size: 13px;
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    line-height: 18px;
+    @include n {
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      gap: 30px;
+    }
+    .icon {
+      width: 20px;
+      height: 20px;
+    }
+    .pay,
+    .contact {
+      &__list {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+      }
+      &__item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        @include m {
+          gap: 10px;
+          flex-wrap: wrap;
+        }
+      }
+      &__link {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+      }
+    }
+    
+  }
+}
