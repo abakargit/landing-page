@@ -4,8 +4,8 @@
 	"author": "Hubcrag (hubcrag.com)",
 	"contributors": [],
 	"scripts": {
-	"deploy": "gh-pages -d build"
-	}
+    "deploy": "gulp build && gh-pages -d build"
+  },
 	"dependencies": {
 		"gulp-svg-sprite": "^1.5.0",
 		"smooth-scrollbar": "^8.7.0"
